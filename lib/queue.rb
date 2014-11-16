@@ -1,7 +1,7 @@
-require_relative 'entry_collection'  # => true
+require_relative 'entry_collection'
 
 class Queue
-  attr_reader :results, :attendees  # => nil
+  attr_reader :results, :attendees
 
   def initialize(repo)
     @attendees = repo

@@ -1,6 +1,6 @@
-require 'test_helper'
+require_relative 'test_helper'
 
-class IntegrationTest < Minitest::Test
+class HappyPathTest < Minitest::Test
  def test_happy_path
    cli = CLI.new
    cli.call "load event_attendees.csv"
