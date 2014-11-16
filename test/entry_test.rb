@@ -3,31 +3,36 @@ require 'minitest/pride'
 require '../lib/entry'
 
 class EntryTest < Minitest::Test
-  attr_reader :entry
 
-  def entry_setup
+    attr_reader :entry
+
+  def setup
+
     @data = {
-      first_name: 'Allison',
-      last_name: 'Nguyen',
-      email_address: 'arannon@jumpstartlab.com',
-      phone_number: '6154385000',
-      zip_code: '20010',
-      street: '3155 19th St NW',
-      city: 'Washington',
-      state: 'DC'
+      first_name: 'sarah',
+      last_name: 'xx',
+      email_address: 'lqrm4462@jumpstartlab.com',
+      home_phone: '9419792000',
+      street: '4175 3rd street north',
+      city: 'saint petersburg',
+      state: 'fl',
+      zipcode: '33703'
     }
 
     @entry = Entry.new(@data)
+
   end
 
-  def test_entry
-    assert_equal entry.first_name, 'Allison'
-    assert_equal entry.last_name, 'Nguyen'
-    assert_equal entry.email_address, 'arannon@jumpstartlab.com'
-    assert_equal entry.phone_number, '6154385000'
-    assert_equal entry.zip_code, '20010'
-    assert_equal entry.street, '3155 19th St NW'
-    assert_equal entry.city, 'Washington'
-    assert_equal entry.state, 'DC'
+  def test_data
+    assert_equal entry.first_name, 'sarah'
+    assert_equal entry.last_name, 'xx'
+    assert_equal entry.email_address, 'lqrm4462@jumpstartlab.com'
+    assert_equal entry.home_phone, '9419792000'
+    assert_equal entry.street, '4175 3rd street north'
+    assert_equal entry.city, 'saint petersburg'
+    assert_equal entry.state, 'fl'
+    assert_equal entry.zipcode, '33703'
   end
+
+
 end

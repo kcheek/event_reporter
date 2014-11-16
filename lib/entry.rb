@@ -1,21 +1,25 @@
 class Entry
-  attr_reader :first_name,
-              :last_name,
-              :email,
-              :zipcode,
-              :city,
-              :state,
-              :address,
-              :phone
+
+  ATTRIBUTES = [:first_name,
+                :last_name,
+                :email_address,
+                :home_phone,
+                :street,
+                :city,
+                :state,
+                :zipcode]
+
+  attr_reader *ATTRIBUTES
 
   def initialize(data)
     @first_name    = data[:first_name].to_s.downcase
     @last_name     = data[:last_name].to_s.downcase
+    @home_phone    = data[:home_phone]
     @email_address = data[:email_address].to_s.downcase
     @zipcode       = data[:zipcode]
     @city          = data[:city].to_s.downcase
     @state         = data[:state].to_s.downcase
-    @address       = data[:address].to_s.downcase
-    @home_phone    = data[:home_phone]
+    @street        = data[:street].to_s.downcase
   end
+
 end
