@@ -5,4 +5,4 @@ require 'cli'
 CLI.new($stdin, $stdout).call
 
 # Push-pull experiment from Mac, 11/15. 11:01 am
-#Practic merge conflicts
+# Practic merge conflicts
