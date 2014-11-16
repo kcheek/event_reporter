@@ -31,19 +31,6 @@ class Queue
   def save_to_file
     puts "It can save to external CSV file"
   end
-
-  def help?
-      @user_input.split[0] == 'h' || @user_input.split[0] == 'help'
-  end
-
-  def help_find?
-    @user_input.split[1] == 'find'
-  end
-
-  def help_queue_count?
-    @user_input.split[1..2] == ['queue', 'count']
-  end
-
   def find_by_first_name(first_name)
     entry.select { |entry| entry.first_name == first_name}
   end
